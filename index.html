@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Plate Maker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-5xl mx-auto bg-white p-6 shadow-lg rounded-lg">
+        <h2 class="text-3xl font-bold mb-4">Number Plate Maker</h2>
+        
+        <div class="mb-4 flex items-center">
+            <label class="block font-semibold mr-2">Reg Number:</label>
+            <input type="text" id="regNumber" class="border p-2 rounded flex-grow text-lg font-bold text-green-700 border-green-700" placeholder="ENTER REG NOW">
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+                <label class="block font-semibold">Vehicle Type:</label>
+                <select id="vehicleType" class="w-full border p-2 rounded">
+                    <option>Car</option>
+                    <option>Bike</option>
+                    <option>Truck</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-semibold">Plates Layout:</label>
+                <select id="platesLayout" class="w-full border p-2 rounded">
+                    <option>Custom Plates</option>
+                    <option>legal Plates</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-semibold">Plate:</label>
+                <select id="platesLayout" class="w-full border p-2 rounded">
+                    <option>Front & Rear</option>
+                    <option>Front</option>
+                    <option>Rear</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-semibold">Front Size:</label>
+                <select id="platesLayout" class="w-full border p-2 rounded">
+                    <option>Standard Car (20.5x4.4in)</option>
+                    <option>Std. 4x4 279mm x 203mm (11in x 8in)</option>
+                    <option>229mm x 76mm (9in x 3in)</option>
+                    <option>254mm x 76mm (10in x 3in)</option>
+                    <option>305mm x 76mm (12in x 3in)</option>
+                    <option>305mm x 152mm (12in x 6in)</option>
+                    <option>330mm x 111mm (13in x 4.4in)</option>
+                    <option>330mm x 165mm (13in x 6.5in)</option>
+                    <option>16in x 4.5in (16in x 4.5in)</option>
+                    <option>520mm x 121mm (20.5in x 4.75in)</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-semibold">Font:</label>
+                <select id="platesLayout" class="w-full border p-2 rounded">
+                    <option>Standerd car</option>
+                    <option>3D font</option>
+                    <option>Inline Font</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-semibold">Border</label>
+                <select id="platesLayout" class="w-full border p-2 rounded">
+                    <option>Black</option>
+                    <option>Red</option>
+                    <option>Blue</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-semibold">Your Slogan :</label>
+                 <input type="text" name="" id="" class="w-full border p-2 rounded">
+            </div>
+            <div class="flex items-center space-x-2 bg-white p-4 rounded-lg shadow">
+                <label class="text-lg font-semibold">Badge:</label>
+                
+                <select class="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="wales">Wales</option>
+                    <option value="england">England</option>
+                    <option value="scotland">Scotland</option>
+                </select>
+        
+                <select class="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="wales-">Wales-</option>
+                    <option value="england-">England-</option>
+                    <option value="scotland-">Scotland-</option>
+                </select>
+        
+                <select class="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                </select>
+            </div>
+            <div class="flex items-center space-x-2 bg-white p-4 rounded-lg shadow ">
+                <label class="text-lg font-semibold">Slogan Fonts:</label>
+                
+                <select class="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="wales">Wales</option>
+                    <option value="england">England</option>
+                    <option value="scotland">Scotland</option>
+                </select>
+        
+                <select class="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="wales-">Wales-</option>
+                    <option value="england-">England-</option>
+                    <option value="scotland-">Scotland-</option>
+                </select>
+        
+                <select class="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                </select>
+            </div>
+        </div>
+
+        
+        <div class="grid grid-cols-3 gap-4 mt-4 text-center">
+            <button class="plate-tab p-2 bg-blue-500 text-white rounded" data-style="standard">STANDARD</button>
+            <button class="plate-tab p-2 bg-gray-500 text-white rounded" data-style="4d">4D</button>
+            <button class="plate-tab p-2 bg-gray-500 text-white rounded" data-style="3d-gel">3D GEL</button>
+        </div>
+
+        <div id="platePreviewContainer" class="my-4 text-center">
+            <div class="inline-block bg-gray-200 p-4 rounded-lg mb-2 w-full max-w-md">
+                <span id="platePreview1" class="text-3xl font-bold">YOUR REG</span>
+            </div>
+            <div class="inline-block bg-yellow-400 px-6 py-3 rounded w-full max-w-md">
+                <span id="platePreview2" class="text-3xl font-bold">YOUR REG</span>
+            </div>
+        </div>
+        
+        <div class="mt-4">
+            <button id="addToBasket" class="w-full bg-green-600 text-white p-3 rounded-lg font-bold">£24.98 - ADD TO BASKET</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("regNumber").addEventListener("input", function() {
+            let regText = this.value.toUpperCase();
+            document.getElementById("platePreview1").textContent = regText;
+            document.getElementById("platePreview2").textContent = regText;
+        });
+
+        document.querySelectorAll(".plate-tab").forEach(tab => {
+            tab.addEventListener("click", function() {
+                document.querySelectorAll(".plate-tab").forEach(t => t.classList.remove("bg-blue-500"));
+                this.classList.add("bg-blue-500");
+                updatePlateStyle(this.dataset.style);
+            });
+        });
+
+        function updatePlateStyle(style) {
+            const platePreview1 = document.getElementById("platePreview1");
+            const platePreview2 = document.getElementById("platePreview2");
+            
+            if (style === "standard") {
+                platePreview1.className = "text-3xl font-bold";
+                platePreview2.className = "text-3xl font-bold bg-yellow-400 px-6 py-3 rounded";
+            } else if (style === "4d") {
+                platePreview1.className = "text-3xl font-extrabold shadow-lg";
+                platePreview2.className = "text-3xl font-extrabold bg-yellow-400 px-6 py-3 rounded shadow-lg";
+            } else if (style === "3d-gel") {
+                platePreview1.className = "text-3xl font-bold italic text-gray-700";
+                platePreview2.className = "text-3xl font-bold italic bg-yellow-400 px-6 py-3 rounded text-gray-700";
+            }
+        }
+    </script>
+</body>
+</html>

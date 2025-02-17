@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Plate Maker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-5xl mx-auto bg-white p-6 shadow-lg rounded-lg">
+        <h2 class="text-3xl font-bold mb-4">Number Plate Maker</h2>
+        
+        <div class="mb-4 flex items-center">
+            <label class="block font-semibold mr-2">Reg Number:</label>
+            <input type="text" id="regNumber" name="regNumber" class="border p-2 rounded flex-grow text-lg font-bold text-green-700 border-green-700" placeholder="ENTER REG NOW">
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+                <label class="block font-semibold">Vehicle Type:</label>
+                <select id="vehicleType" name="vehicleType" class="w-full border p-2 rounded">
+                    <option>Car</option>
+                    <option>Bike</option>
+                    <option>Truck</option>
+                </select>
+            </div>
+            
+            <div>
+                <label class="block font-semibold">Plates Layout:</label>
+                <select id="platesLayout" name="platesLayout" class="w-full border p-2 rounded">
+                    <option>Custom Plates</option>
+                    <option>Legal Plates</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block font-semibold">Plate:</label>
+                <select id="plateType" name="plateType" class="w-full border p-2 rounded">
+                    <option>Front & Rear</option>
+                    <option>Front</option>
+                    <option>Rear</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block font-semibold">Front Size:</label>
+                <select id="frontSize" name="frontSize" class="w-full border p-2 rounded">
+                    <option>Standard Car (20.5x4.4in)</option>
+                    <option>Std. 4x4 279mm x 203mm (11in x 8in)</option>
+                    <option>229mm x 76mm (9in x 3in)</option>
+                    <option>254mm x 76mm (10in x 3in)</option>
+                    <option>305mm x 76mm (12in x 3in)</option>
+                    <option>305mm x 152mm (12in x 6in)</option>
+                    <option>330mm x 111mm (13in x 4.4in)</option>
+                    <option>330mm x 165mm (13in x 6.5in)</option>
+                    <option>16in x 4.5in (16in x 4.5in)</option>
+                    <option>520mm x 121mm (20.5in x 4.75in)</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-semibold">Back Size:</label>
+                <select id="frontSize" name="frontSize" class="w-full border p-2 rounded">
+                    <option>Standard Car (20.5x4.4in)</option>
+                    <option>Std. 4x4 279mm x 203mm (11in x 8in)</option>
+                    <option>229mm x 76mm (9in x 3in)</option>
+                    <option>254mm x 76mm (10in x 3in)</option>
+                    <option>305mm x 76mm (12in x 3in)</option>
+                    <option>305mm x 152mm (12in x 6in)</option>
+                    <option>330mm x 111mm (13in x 4.4in)</option>
+                    <option>330mm x 165mm (13in x 6.5in)</option>
+                    <option>16in x 4.5in (16in x 4.5in)</option>
+                    <option>520mm x 121mm (20.5in x 4.75in)</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block font-semibold">Font:</label>
+                <select id="font" name="font" class="w-full border p-2 rounded">
+                    <option>Standard car</option>
+                    <option>3D font</option>
+                    <option>Inline Font</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block font-semibold">Border</label>
+                <select id="border" name="border" class="w-full border p-2 rounded">
+                    <option>None</option>
+                    <option>Black</option>
+                    <option>Red</option>
+                    <option>Blue</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block font-semibold">Your Slogan:</label>
+                <input type="text" id="slogan" name="slogan" class="w-full border p-2 rounded">
+            </div>
+
+            <div class="flex items-center space-x-2 bg-white p-4 rounded-lg shadow">
+                <label class="text-lg font-semibold">Badge:</label>
+                <select id="badgeRegion" name="badgeRegion" class="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="wales">Wales</option>
+                    <option value="england">England</option>
+                    <option value="scotland">Scotland</option>
+                </select>
+
+                <select id="badgeSubRegion" name="badgeSubRegion" class="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="wales-">Wales-</option>
+                    <option value="england-">England-</option>
+                    <option value="scotland-">Scotland-</option>
+                </select>
+
+                <select id="badgeColor" name="badgeColor" class="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                </select>
+            </div>
+
+            <div class="flex items-center space-x-2 bg-white p-4 rounded-lg shadow">
+                <label class="text-lg font-semibold">Slogan Fonts:</label>
+                <select id="sloganStyle" name="sloganStyle" class="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="wales">Wales</option>
+                    <option value="england">England</option>
+                    <option value="scotland">Scotland</option>
+                </select>
+
+                <select id="sloganVariant" name="sloganVariant" class="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="wales-">Wales-</option>
+                    <option value="england-">England-</option>
+                    <option value="scotland-">Scotland-</option>
+                </select>
+
+                <select id="sloganColor" name="sloganColor" class="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 mt-4 text-center">
+            <button class="plate-style-btn p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors" data-style="standard">STANDARD</button>
+            <button class="plate-style-btn p-2 bg-gray-500 text-white rounded hover:bg-blue-600 transition-colors" data-style="4d">4D</button>
+            <button class="plate-style-btn p-2 bg-gray-500 text-white rounded hover:bg-blue-600 transition-colors" data-style="3d-gel">3D GEL</button>
+        </div>
+
+        <div class=" my-4 text-center flex gap-4" id="my-plate-style">
+            <div class="flex bg-gray-200 p-4 rounded-lg mb-2 w-full max-w-md">
+                 <!-- <img src="" alt="demo" class="badge-image hidden"> -->
+                 <img src="" alt="demo" class="badge-image hidden w-10 h-10 object-contain rounded-md border border-gray-300 shadow-md">
+
+
+                <span id="platePreview1" class="text-3xl font-bold">YOUR REG</span>
+                <div id="sloganPreview1" class="text-sm mt-1 text-gray-600 hidden"></div>
+            </div>
+            <div class="flex bg-yellow-400 px-6 py-3 rounded w-full max-w-md ">
+                <!-- <img src="" alt="demo" class="badge-image hidden"> -->
+                <img src="" alt="demo" class="badge-image hidden w-10 h-10 object-contain rounded-md border border-gray-300 shadow-md">
+
+
+                <span id="platePreview2" class="text-3xl font-bold">YOUR REG</span>
+                <div id="sloganPreview2" class="text-sm mt-1 hidden"></div>
+            </div>
+        </div>
+        
+        <div class="mt-4">
+            <button class="w-full bg-green-600 text-white p-3 rounded-lg font-bold hover:bg-green-700 transition-colors">
+                £24.98 - ADD TO BASKET
+            </button>
+        </div>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
