@@ -51,15 +51,15 @@ function updatePlatePreviews() {
             styleClasses = "font-extrabold text-shadow-lg";
             break;
         case "3d-gel":
-            styleClasses = "italic text-gray-700 text-shadow-lg";
+            styleClasses = "italic text-gray-700 shadow-inner";
             break;
         default:
             styleClasses = "";
     }
 
     preview1.className = `${baseClasses} ${styleClasses}`;
-    preview1.style.textShadow = "2px 2px 4px rgba(255, 0, 0, 0.8)";
-    preview2.style.textShadow = "2px 2px 4px rgba(255, 0, 0, 0.8)"; 
+    preview1.style.textShadow = "2px 2px 4px rgba(55, 23, 23, 0.8)";
+    preview2.style.textShadow = "2px 2px 4px rgba(57, 20, 20, 0.8)"; 
     preview2.className = `${baseClasses} ${styleClasses} bg-yellow-400 px-6 py-3 rounded`;
 }
 
