@@ -1,4 +1,4 @@
- 
+
 const plateData = {
     regNumber: '',
     vehicleType: 'Car',
@@ -75,17 +75,17 @@ document.getElementById('slogan').addEventListener('input', (e) => {
 
 // Event listeners for plate style buttons
 document.querySelectorAll('.plate-style-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function () {
         // Reset all buttons to gray
         document.querySelectorAll('.plate-style-btn').forEach(b => {
             b.classList.remove('bg-blue-500');
             b.classList.add('bg-gray-500');
         });
-        
+
         // Highlight selected button
         this.classList.remove('bg-gray-500');
         this.classList.add('bg-blue-500');
-        
+
         // Update plate style
         plateData.plateStyle = this.dataset.style;
         updatePlatePreviews();
@@ -118,33 +118,33 @@ document.querySelectorAll('.plate-style-btn').forEach(btn => {
     });
 });
 
- 
+
 const plateStyle = document.getElementById('my-plate-style');
 const platePreview01 = plateStyle.children[0];
 const platePreview02 = plateStyle.children[1];
 
-const vehicleType_of=document.getElementById('vehicleType');
-const platesLayout=document.getElementById('platesLayout')
+const vehicleType_of = document.getElementById('vehicleType');
+const platesLayout = document.getElementById('platesLayout')
 
-const plateType=document.getElementById('plateType')
-const frontSize=document.getElementById('frontSize')
+const plateType = document.getElementById('plateType')
+const frontSize = document.getElementById('frontSize')
 
 
 
 
 document.getElementById('border').addEventListener('input', (e) => {
     let valueOfBorder = e.target.value.trim().toLowerCase();
-    
+
     let borderStyle = "5px solid"; // Ensuring a solid border is applied
 
     if (valueOfBorder === 'blue') {
         platePreview01.style.border = borderStyle + " blue";
         platePreview02.style.border = borderStyle + " blue";
-    } 
+    }
     else if (valueOfBorder === 'red') {
         platePreview01.style.border = borderStyle + " red";
         platePreview02.style.border = borderStyle + " red";
-    } 
+    }
     else if (valueOfBorder === 'black') {
         platePreview01.style.border = borderStyle + " black";
         platePreview02.style.border = borderStyle + " black";
@@ -152,21 +152,21 @@ document.getElementById('border').addEventListener('input', (e) => {
     else if (valueOfBorder === 'none') {
         platePreview01.style.border = "none"; // No border when "none" is selected
         platePreview02.style.border = "none"; // No border when "none" is selected
-    } 
+    }
 
     console.log(valueOfBorder);
 });
 
 
-vehicleType_of.addEventListener('click',(e)=>{
-    vehicleType_value=e.target.value.trim().toLowerCase();
+vehicleType_of.addEventListener('click', (e) => {
+    vehicleType_value = e.target.value.trim().toLowerCase();
     // console.log(vehicleType_value)
 })
 
 
 platesLayout.addEventListener('click', (e) => {
     const platesLayout_value = e.target.textContent.trim().toLowerCase(); // Use textContent
-console.log(platesLayout_value)
+    console.log(platesLayout_value)
     if (platesLayout_value === 'legal plates') {
         platePreview01.style.wordSpacing = "10px"; // Set gap between words
         platePreview02.style.wordSpacing = "10px"; // Set gap between words
@@ -178,15 +178,15 @@ plateType.addEventListener('change', (e) => {
     const plateType_value = e.target.value.trim().toLowerCase();
 
     if (plateType_value === 'front') {
-        platePreview01.style.display='block'
-        platePreview02.style.display='none'
+        platePreview01.style.display = 'block'
+        platePreview02.style.display = 'none'
     } else if (plateType_value === 'rear') {
 
-        platePreview01.style.display='none'
-        platePreview02.style.display='block'
+        platePreview01.style.display = 'none'
+        platePreview02.style.display = 'block'
     } else if (plateType_value === 'front & rear') {
-        platePreview01.style.display=''
-        platePreview02.style.display=''
+        platePreview01.style.display = ''
+        platePreview02.style.display = ''
     }
 
     // Log the selected value for debugging
@@ -262,60 +262,115 @@ frontSize.addEventListener('change', (e) => {
 });
 
 
-// const badgeRegion=document.getElementById('badgeRegion') 
-// const badgeSubRegion =document.getElementById('badgeSubRegion') 
-// const badgeColor=document.getElementById('badgeColor') 
 
-// const badgeImage=document.getElementsByClassName('badge-image')
-// console.log(badgeImage)
 
- 
-// if (badgeImage) {
-//     badgeRegion.addEventListener('change', (e) => {  
-//         const badgeRegionValue = e.target.value.trim().toLowerCase();
-
-//         if (badgeRegionValue === 'england') {  
-//             badgeImage.src = 'england_flag.jpeg'; // Set image source
-//             badgeImage.style.display = 'block'; // Show image
-//         } else if (badgeRegionValue === 'wales') {  
-//             badgeImage.src = 'wales_flag.jpeg';
-//             badgeImage.style.display = 'block';  
-//         } else if (badgeRegionValue === 'scotland') {  
-//             badgeImage.src = 'scotland_flag.jpeg';
-//             badgeImage.style.display = 'block';  
-//         } else {  
-//             badgeImage.style.display = 'none'; // Hide image  
-//         }  
-//     });
-// } else {
-//     console.error("badgeImage element not found in the DOM!");
-// }
-
-document.addEventListener("DOMContentLoaded", function() {  
-    const badgeRegion = document.getElementById('badgeRegion');  
+document.addEventListener("DOMContentLoaded", function () {
+    const badgeRegion = document.getElementById('badgeRegion');
     const badgeImages = document.querySelectorAll('.badge-image'); // Select all images with class
 
-    if (badgeImages.length === 0) {  
-        console.error("❌ No elements found with class 'badge-image' in the DOM!");  
-        return;  
+    if (badgeImages.length === 0) {
+        console.error("❌ No elements found with class 'badge-image' in the DOM!");
+        return;
     }
 
-    badgeRegion.addEventListener('change', (e) => {  
+    badgeRegion.addEventListener('change', (e) => {
         const badgeRegionValue = e.target.value.trim().toLowerCase();
-        
+
         badgeImages.forEach(badgeImage => { // Loop through all images
-            if (badgeRegionValue === 'england') {  
-                badgeImage.src = 'england_flag.jpeg';  
+            if (badgeRegionValue === 'england') {
+                badgeImage.src = 'england_flag.jpeg';
                 badgeImage.classList.remove('hidden'); // Show image  
-            } else if (badgeRegionValue === 'wales') {  
-                badgeImage.src = 'wales_flag.png';  
-                badgeImage.classList.remove('hidden');  
-            } else if (badgeRegionValue === 'scotland') {  
-                badgeImage.src = 'scotland.jpg';  
-                badgeImage.classList.remove('hidden');  
-            } else {  
+            } else if (badgeRegionValue === 'wales') {
+                badgeImage.src = 'wales_flag.png';
+                badgeImage.classList.remove('hidden');
+            } else if (badgeRegionValue === 'scotland') {
+                badgeImage.src = 'scotland.jpg';
+                badgeImage.classList.remove('hidden');
+            } else {
                 badgeImage.classList.add('hidden'); // Hide image  
-            }  
+            }
         });
-    });  
+    });
 });
+// Accessing an element from the HTML
+const font_Element = document.getElementById('font');
+const prev_fron_Element = document.getElementById('platePreview1');
+const prev_rear_Element = document.getElementById('platePreview2');
+
+// Event listener for font dropdown change
+font_Element.addEventListener('change', (e) => {
+    const font_Element_value = e.target.value.trim().toLowerCase();
+
+    // Apply the selected font directly to the preview elements
+    if (font_Element_value === 'standard car') {
+        prev_fron_Element.style.fontFamily = "'Arial', sans-serif";
+        prev_rear_Element.style.fontFamily = "'Arial', sans-serif";
+    } else if (font_Element_value === '3d font') {
+        prev_fron_Element.style.fontFamily = "'3D Font', sans-serif";
+        prev_fron_Element.style.textShadow = '2px 2px 4px rgba(0, 0, 0, 0.3)';
+        prev_rear_Element.style.fontFamily = "'3D Font', sans-serif";
+        prev_rear_Element.style.textShadow = '2px 2px 4px rgba(0, 0, 0, 0.3)';
+    } else if (font_Element_value === 'inline font') {
+        prev_fron_Element.style.fontFamily = "'Inline Font', sans-serif";
+        prev_fron_Element.style.fontWeight = 'lighter';
+        prev_rear_Element.style.fontFamily = "'Inline Font', sans-serif";
+        prev_rear_Element.style.fontWeight = 'lighter';
+    }
+});
+
+
+const sloganStyle = document.getElementById('sloganStyle');
+const sloganVariant = document.getElementById('sloganVariant');
+const sloganColor = document.getElementById('sloganColor');
+
+const sloganPreview1 = document.getElementById('sloganPreview1');
+const sloganPreview2 = document.getElementById('sloganPreview2');
+
+// Default settings for slogan preview
+window.addEventListener('DOMContentLoaded', () => {
+    // Default slogan font, size, and color
+    sloganPreview1.style.fontFamily = 'Arial';
+    sloganPreview2.style.fontFamily = 'Arial';
+    sloganPreview1.style.fontSize = '16px'; // Default size
+    sloganPreview2.style.fontSize = '16px'; // Default size
+    sloganPreview1.style.color = 'black';
+    sloganPreview2.style.color = 'black';
+});
+
+// Event listener for font style
+sloganStyle.addEventListener('change', (e) => {
+    const selectedStyle = e.target.value;
+    sloganPreview1.style.fontFamily = selectedStyle;
+    sloganPreview2.style.fontFamily = selectedStyle;
+});
+
+// Event listener for font variant (size)
+sloganVariant.addEventListener('change', (e) => {
+    const selectedVariant = e.target.value;
+
+    switch (selectedVariant) {
+        case 'Std size':
+            sloganPreview1.style.fontSize = '16px'; // Standard size
+            sloganPreview2.style.fontSize = '16px'; // Standard size
+            break;
+        case 'Large size':
+            sloganPreview1.style.fontSize = '24px'; // Large size
+            sloganPreview2.style.fontSize = '24px'; // Large size
+            break;
+        case 'Largest size':
+            sloganPreview1.style.fontSize = '32px'; // Largest size
+            sloganPreview2.style.fontSize = '32px'; // Largest size
+            break;
+        default:
+            sloganPreview1.style.fontSize = '16px'; // Default to standard size
+            sloganPreview2.style.fontSize = '16px'; // Default to standard size
+    }
+});
+
+// Event listener for font color
+sloganColor.addEventListener('change', (e) => {
+    const selectedColor = e.target.value.toLowerCase(); // Convert to lowercase for uniformity
+    sloganPreview1.style.color = selectedColor;
+    sloganPreview2.style.color = selectedColor;
+});
+
