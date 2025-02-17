@@ -43,7 +43,7 @@ function updatePlatePreviews() {
     }
 
     // Update plate style classes
-    const baseClasses = "text-3xl font-bold";
+    const baseClasses = "text-4xl font-bold";
     let styleClasses = "";
 
     switch (plateData.plateStyle) {
@@ -58,12 +58,12 @@ function updatePlatePreviews() {
     }
 
     preview1.className = `${baseClasses} ${styleClasses}`;
-    preview1.style.textShadow = "2px 2px 4px rgba(206, 179, 179, 0.4)";
-    preview2.style.textShadow = "2px 2px 4px rgba(201, 172, 172, 0.4)"; 
+    preview1.style.textShadow = "2px 2px 4px rgba(255, 0, 0, 0.8)";
+    preview2.style.textShadow = "2px 2px 4px rgba(255, 0, 0, 0.8)"; 
     preview2.className = `${baseClasses} ${styleClasses} bg-yellow-400 px-6 py-3 rounded`;
 }
 
-// Event listeners for all inputs
+// Event listeners for all inputs   
 document.getElementById("regNumber").addEventListener("input", (e) => {
     plateData.regNumber = e.target.value.toUpperCase();
     updatePlatePreviews();
