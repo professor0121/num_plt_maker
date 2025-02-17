@@ -48,16 +48,18 @@ function updatePlatePreviews() {
 
     switch (plateData.plateStyle) {
         case "4d":
-            styleClasses = "font-extrabold shadow-lg";
+            styleClasses = "font-extrabold text-shadow-lg";
             break;
         case "3d-gel":
-            styleClasses = "italic text-gray-700";
+            styleClasses = "italic text-gray-700 text-shadow-lg";
             break;
         default:
             styleClasses = "";
     }
 
     preview1.className = `${baseClasses} ${styleClasses}`;
+    preview1.style.textShadow = "2px 2px 4px rgba(206, 179, 179, 0.4)";
+    preview2.style.textShadow = "2px 2px 4px rgba(201, 172, 172, 0.4)"; 
     preview2.className = `${baseClasses} ${styleClasses} bg-yellow-400 px-6 py-3 rounded`;
 }
 
